@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Unicode strikethrough text generator</title>
-		<style type="text/css">
-		.header {
-			font-weight: bold;
-		}
-		
-		.big {
-			font-weight: bold;
-			font-size: 24px;
-		}
-		
-		.sub {
-			font-style: italic;
-			font-size: 10px;
-		}
-		
-		body {
-			margin-left: 50px;
-		}
-		</style>
-		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="strike.js"></script>
 		<script type="text/javascript">
 		$(function() {
@@ -38,21 +22,33 @@
 		</script>
 	</head>
 	<body>
-		<p><span class="big">Unicode strikethrough text generator</span><br><span class="sub">Compatible with Thai language</span></p>
-		<table>
-			<tr>
-				<td class="header">Input</td>
-				<td class="header">Output</td>
-			</tr>
-			<tr>
-				<td><textarea id="input" rows="8" cols="50"></textarea></td>
-				<td><textarea id="output" rows="8" cols="50" readonly></textarea></td>
-			</tr>
-			<tr>
-				<td><button id="generate">Generate</button></td>
-				<td><button id="tweet">Tweet this!</button></td>
-			</tr>
-		</table>
-		<p class="sub">Inspired by <a href="http://adamvarga.com/strike/" target="_blank">http://adamvarga.com/strike/</a><br>Created by <a href="https://vi.satou.ch/" target="_blank">Visatouch (xerodotc)</a></p>
+		<nav class="navbar navbar-dark bg-dark">
+			<span class="navbar-brand mb-0 h1">Unicode strikethrough text generator</span>
+			<span class="navbar-text">Compatible with Thai language</span>
+		</nav>
+		<div class="container">
+			<div class="row"><div class="col">&nbsp;</div></div>
+			<div class="row">
+				<div class="col-lg">
+					<h4>Input</h4>
+					<textarea id="input" rows="8" class="form-control"></textarea>
+					&nbsp;
+					<button id="generate" class="form-control btn btn-primary">Generate!</button>
+					&nbsp;
+				</div>
+				<div class="col-lg">
+					<h4>Output</h4>
+					<textarea id="output" rows="8" class="form-control" readonly></textarea>
+					&nbsp;
+					<button id="tweet" class="form-control btn btn-secondary">Tweet this!</button>
+					&nbsp;
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p>Inspired by <a href="http://adamvarga.com/strike/" target="_blank">http://adamvarga.com/strike/</a><br>Created by <a href="https://vi.satou.ch/" target="_blank">Visatouch (xerodotc)</a></p>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
